@@ -1,14 +1,14 @@
 all:
-	@cd ft_printf && make all
-	@cc -Wall -Wextra -Werror src/server.c ft_printf/libftprintf.a -o server
-	@cc -Wall -Wextra -Werror src/client.c ft_printf/libftprintf.a -o client
+	@cd libft && make
+	@cc -Wall -Wextra -Werror src/server.c libft/libft.a -o server
+	@cc -Wall -Wextra -Werror src/client.c libft/libft.a -o client
 
 clean:
-	@cd ft_printf && make clean
+	@cd libft && make clean
 	@rm -f server
 	@rm -f client
 
 fclean: clean
-	@cd ft_printf && make fclean
+	@cd libft && make fclean
 
 re: fclean all
