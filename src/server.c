@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   server.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hhayato <hhayato@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/14 12:04:15 by hhayato           #+#    #+#             */
+/*   Updated: 2025/03/14 12:04:26 by hhayato          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk.h"
 
-void ft_confirm(int sig){
+void	ft_confirm(int sig)
+{
 	static unsigned char	current_char;
 	static int				bit_index;
 
@@ -21,14 +34,13 @@ void ft_confirm(int sig){
 
 int	main(void)
 {
-	ft_putnbr_fd(getpid(),1);
+	ft_putnbr_fd(getpid(), 1);
 	write(1, "\n", 1);
 	signal(SIGUSR1, ft_confirm);
-		signal(SIGUSR2, ft_confirm);
+	signal(SIGUSR2, ft_confirm);
 	while (1 == 1)
 	{
-		
-		pause(); 
+		pause();
 	}
 	return (0);
 }
