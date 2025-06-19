@@ -28,7 +28,7 @@ minitalkは42 Schoolのプロジェクトで、Unixシグナルを用いたプ�
 
 1. リポジトリをクローン:
 ```bash
-git clone https://github.com/hayatosann/minitalk.git
+git clone https://github.com/hayatosann/42_minitalk.git
 cd minitalk
 ```
 
